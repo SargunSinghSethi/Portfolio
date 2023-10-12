@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sargun's Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Alice"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,11 +26,152 @@
           <p>I am a <span class="orange" id="dynamic-text"></span></p>
         </div>
       </section>
-      <section id="about"></section>
-      <section id="projects"></section>
-      <section id="skills"></section>
-      <section id="contact"></section>
-      <section></section>
+      <section id="about">
+        <div>
+          <h2>About</h2>
+        </div>
+        <div>
+          <p>
+            I'm Sargun, a dedicated frontend developer with a knack for crafting
+            engaging web projects. With over two successful frontend endeavors
+            under my belt, I'm now immersed in mastering React to enhance my
+            skill set.
+          </p>
+          <p>
+            I'm passionate about tackling challenging projects that push the
+            boundaries of my abilities. As a developer, I prioritize creating
+            not only aesthetically pleasing websites but also seamless user
+            experiences.
+          </p>
+          <p>
+            I thrive on problem-solving and innovation, consistently seeking to
+            elevate my web development expertise. The journey ahead is filled
+            with exciting opportunities, and I'm eager to embrace each one,
+            shaping the ever-evolving digital landscape.
+          </p>
+        </div>
+      </section>
+      <section id="projects">
+        <div>
+          <h2>Projects</h2>
+        </div>
+        <div>
+          <p>Check out some of my work right here</p>
+        </div>
+        <div class="project-box">
+          <div>
+            <div>
+              <a
+                href="https://fireflowersargun.netlify.app/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./img/fire-flower-no-black.png"
+                  alt="Fire Flower 2D Game"
+                />
+              </a>
+            </div>
+            <div>
+              <h3 class="orange">Lexcura Consultancy</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+                architecto autem itaque molestiae ab cupiditate consectetur
+                nostrum quia earum aliquam, corporis ipsam delectus alias
+                doloremque! Minima, minus eaque. Exercitationem sapiente soluta
+                minus nemo magni earum obcaecati, rerum officia molestiae ullam
+                ea molestias deleniti placeat, quibusdam enim ratione temporibus
+                maxime eos.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <a
+                href="https://lexcuraconsultancy.netlify.app/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./img/lexcura-consultancy.png"
+                  alt=" Lexcura Consultancy"
+                />
+              </a>
+            </div>
+            <div>
+              <h3 class="orange">Fire Flower</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus debitis cupiditate, nemo nisi ex eos quos aut!
+                Incidunt eius vitae nulla molestiae quisquam laborum. Quisquam
+                nobis iste voluptas eveniet magnam, reprehenderit, explicabo
+                dolor officiis, eos placeat impedit. Et velit quaerat, sed eum
+                unde, nisi vitae doloremque aut iure rerum saepe!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="skills">
+        <div>
+          <h2>Skills</h2>
+        </div>
+        <div>
+          <p>Check out some of my work right here</p>
+        </div>
+        <div class="skill-box">
+          <div>
+            <div>
+              <img src="./img/HTML.png" alt="HTML" />
+            </div>
+            <div>
+              <h3>HTML</h3>
+            </div>
+          </div>
+          <div>
+            <div>h3</div>
+            <div>
+              <img src="./img/CSS.png" alt=" CSS" />
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section id="contact-me">
+        <div>d</div>
+        <div>
+          <h2>Contact Me</h2>
+          <form name="contact" id="contact" method="POST" data-netlify="true">
+            <section>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Enter your Name"
+                required
+              />
+            </section>
+            <section>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your Email"
+              />
+            </section>
+            <section>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Enter your Message"
+                required
+              ></textarea>
+            </section>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
     </main>
     <script src="./index.js"></script>
   </body>
