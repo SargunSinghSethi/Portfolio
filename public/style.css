@@ -2,16 +2,18 @@
   margin: 0;
   padding: 0;
   background-color: #cbd5df;
-  /* background-color: #cbafdd; */
   /* background-color: #fff; */
-  font-family: sans-serif;
+  /* background-color: #212121; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 :root {
   --orange: #ff771b;
-  /* --light-blue: #7d8df6; */
   --light-blue: #3752f7;
   --purple: #5a4db2;
+  --font-family-secondary: "Montserrat", sans-serif;
+  --inner-shadow: 1px 4px 2px -3px #aec0d1b3 inset,
+    -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
 }
 
 header {
@@ -40,7 +42,7 @@ a:visited {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  height: 600px;
 }
 
 #intro div {
@@ -49,7 +51,8 @@ a:visited {
 .intro-right h1 {
   font-size: 4.5rem;
   color: var(--purple);
-  font-weight: normal;
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
 }
 
 .intro-right p {
@@ -72,7 +75,7 @@ a:visited {
   align-items: center;
   justify-content: center;
   gap: 18px;
-  height: 100vh;
+  padding: 60px 0 50px 0;
 }
 
 #about div h2,
@@ -81,6 +84,8 @@ a:visited {
 #contact-me div h2 {
   color: var(--purple);
   font-size: 3rem;
+  text-align: center;
+  font-family: var(--font-family-secondary);
 }
 
 #about div,
@@ -110,6 +115,7 @@ a:visited {
 .skill-box h3 {
   padding: 10px;
   font-size: 1.5rem;
+  font-family: var(--font-family-secondary);
 }
 
 .project-box div img {
@@ -132,8 +138,63 @@ a:visited {
   transform: scale(1.05);
 }
 
-#contact {
+#contact-me .info-container {
+  display: flex;
   width: 1050px;
+  justify-content: space-between;
+}
+
+.info-container > div {
+  flex: 50%;
+}
+
+.info-container h3 {
+  font-size: 2.5rem;
+  font-family: var(--font-family-secondary);
+  color: var(--purple);
+}
+
+.info-container > div a {
+  text-decoration: none;
+  color: #92b1cd;
+  display: inline-block;
+  position: relative;
+  transition: color 0.4s ease-in-out;
+}
+
+.info-container > div a:hover {
+  color: var(--light-blue);
+}
+
+.info-container > div a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2.5px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--light-blue);
+  transition: transform 0.4s ease-in-out;
+  transform-origin: bottom right;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.info-container > div a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.info-container div > div:nth-child(2) p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 20px 60px 0 0;
+  color: var(--light-blue);
+}
+
+#contact {
+  flex: 50%;
 }
 
 #contact section {
@@ -141,19 +202,33 @@ a:visited {
   padding: 8px;
 }
 
+#contact label {
+  font-size: 1.02rem;
+  color: var(--light-blue);
+  font-weight: 600;
+}
+
 #contact input,
 #contact textarea {
-  width: inherit;
+  width: 100%;
   border-radius: 6px;
   text-decoration: none;
   font-size: 1.2rem;
   padding: 8px;
   outline: none;
-  border-color: var(--light-blue);
+  border: 2px solid #aec0d1;
+
+  background-color: #cbd5dfae;
+  transition: all 0.4s ease-in;
 }
 
 #contact textarea {
-  border: 2px solid var(--light-blue);
+  resize: none;
+}
+
+#contact textarea:focus,
+#contact input:focus {
+  border-color: var(--light-blue);
 }
 
 #contact button {
@@ -185,6 +260,7 @@ a:visited {
 
 #contact button:hover {
   color: #fff;
+  cursor: pointer;
 }
 
 #contact button:hover::before {
@@ -195,4 +271,12 @@ a:visited {
 button:active:before {
   background: var(--orange);
   transition: background 0s;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: var(--purple);
+  color: white;
 }

@@ -23,7 +23,7 @@
         </div>
         <div class="intro-right">
           <h1>Hi, my name is <br /><span class="orange">Sargun.</span></h1>
-          <p>I am a <span class="orange" id="dynamic-text"></span></p>
+          <p>I am a <span id="dynamic-text"></span></p>
         </div>
       </section>
       <section id="about">
@@ -137,44 +137,85 @@
         </div>
       </section> -->
       <section id="contact-me">
-        <div>
-          <h2>Reach out to me!</h2>
-          <form name="contact" id="contact" method="POST" data-netlify="true">
-            <section>
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                placeholder="Enter your Name"
-                required
-              />
-            </section>
-            <section>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your Email"
-              />
-            </section>
-            <section>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Enter your Message"
-                required
-              ></textarea>
-            </section>
-            <section>
-              <button type="submit">Submit</button>
-            </section>
-          </form>
+        <div><h2>Contact Me</h2></div>
+        <div class="info-container">
+          <div>
+            <div>
+              <img src="./img/contact.png" alt="Contact Greeting" />
+            </div>
+            <div>
+              <h3>Sargun Singh Sethi</h3>
+              <p>Freelance Frontend Developer</p>
+              <p>
+                I am available for freelance work. Connect with me via and call
+                in to my account.
+              </p>
+              <p>
+                Phone:
+                <span><a href="tel:+918178264414">+918178264414</a></span>
+                <br />
+                Email:
+                <span
+                  ><a href="mailto:sethisargunsingh@gmail.com">
+                    sethisargunsingh@gmail.com</a
+                  ></span
+                >
+              </p>
+              <p>FIND WITH ME</p>
+            </div>
+            <div></div>
+          </div>
+          <div>
+            <form name="contact" id="contact" method="POST" data-netlify="true">
+              <section>
+                <label for="firstName">FULL NAME</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  autocomplete="true"
+                  required
+                />
+              </section>
+              <section>
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  autocomplete="true"
+                  required
+                />
+              </section>
+              <section>
+                <label for="subject">SUBJECT</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  autocomplete="true"
+                  required
+                />
+              </section>
+              <section>
+                <label for="message">WRITE YOUR REQUIREMENTS</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  required
+                ></textarea>
+              </section>
+              <section>
+                <button type="submit">Submit</button>
+              </section>
+            </form>
+          </div>
         </div>
       </section>
     </main>
-    <footer>Copyright © All Right Reserved</footer>
+    <footer>2023. All rights reserved by Sargun Singh Sethi.</footer>
     <script src="./index.js"></script>
   </body>
 </html>
