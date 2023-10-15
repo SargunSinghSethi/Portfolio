@@ -6,6 +6,7 @@
   /* background-color: #212121; */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
 }
 :root {
   --orange: #ff771b;
@@ -30,12 +31,37 @@ header {
 }
 
 .default-nav a {
-  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: color 0.4s ease-in-out;
+}
+
+.default-nav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  left: 0;
+  bottom: -2px;
+  opacity: 0;
+  background-color: var(--light-blue);
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.default-nav a:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 a,
 a:visited {
+  text-decoration: none;
   color: inherit;
+  outline: none;
 }
 
 #intro {
@@ -69,13 +95,12 @@ a:visited {
 #projects,
 #skills,
 #contact-me {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 18px;
-  padding: 60px 0 50px 0;
+  padding: 40px 0 40px 0;
 }
 
 #about div h2,
@@ -140,12 +165,28 @@ a:visited {
 
 #contact-me .info-container {
   display: flex;
-  width: 1050px;
-  justify-content: space-between;
+  justify-content: center;
+  width: 1100px;
+  height: 700px;
 }
 
 .info-container > div {
   flex: 50%;
+}
+
+.info-container > div div:first-child {
+  width: 500px;
+  height: 280px;
+}
+
+#contact-me > div.info-container > div:nth-child(1) > div:nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.info-container div > div:nth-child(2) {
+  padding: 10px;
 }
 
 .info-container h3 {
@@ -156,22 +197,22 @@ a:visited {
 
 .info-container > div a {
   text-decoration: none;
-  color: #92b1cd;
+  color: var(--orange);
   display: inline-block;
   position: relative;
   transition: color 0.4s ease-in-out;
 }
 
-.info-container > div a:hover {
+.info-container > div div:nth-child(2) a:hover {
   color: var(--light-blue);
 }
 
-.info-container > div a::after {
+.info-container > div div:nth-child(2) a::after {
   content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2.5px;
+  height: 2px;
   left: 0;
   bottom: 0;
   background-color: var(--light-blue);
@@ -181,7 +222,7 @@ a:visited {
   border-radius: 10px;
 }
 
-.info-container > div a:hover::after {
+.info-container > div div:nth-child(2) a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -189,8 +230,22 @@ a:visited {
 .info-container div > div:nth-child(2) p {
   font-size: 1.125rem;
   font-weight: 600;
-  padding: 20px 60px 0 0;
+  padding: 20px 20px 0 0;
   color: var(--light-blue);
+}
+
+.img {
+  filter: invert(24%) sepia(93%) saturate(2598%) hue-rotate(229deg)
+    brightness(97%) contrast(100%);
+  width: 50px;
+  background-color: transparent;
+  padding: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.img:hover {
+  filter: invert(59%) sepia(38%) saturate(4751%) hue-rotate(347deg)
+    brightness(101%) contrast(101%);
 }
 
 #contact {
@@ -210,7 +265,7 @@ a:visited {
 
 #contact input,
 #contact textarea {
-  width: 100%;
+  width: 525px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 1.2rem;
@@ -242,6 +297,7 @@ a:visited {
   z-index: 1;
   color: var(--orange);
   font-size: 1.2rem;
+  outline: none;
   transition: color 0.5s;
 }
 
